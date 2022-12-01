@@ -14,8 +14,20 @@ int main (int argc, char* argv[]) {
   cout << "\t-Player 2 will follow for \"O\" and the cycle will continue until someone wins";
   cout << "\t-The first to get three in a row wins\n\n\n\n";
 
+ /*Okay, here's the plan
+ -Establish an array or vector for the field
+ -Have them tied to a coordinate plane
+ -Make sure input is off by one bc that's how vectors work
+ -Maybe include some ascii art but probably not becuase that's not my forté
+ -Create a loop that esablishes gameplay
+    I'm thinking player1 turn (cin coordinates as ints handled with switch), win check function,
+    followed by same for player two, resetting variables with initiation
 
+    About that win check function, I think I can do some fancy maths to see if a
+    player has one rather than creating the 8 win conditions
+    This just made me think of considering to use bitfields. If I can, I will
 
+    Not much planned after that. Getting the whole github bullshit figured out tuckered me out*/
 
 
 }
