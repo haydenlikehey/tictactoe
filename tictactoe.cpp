@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "ttt.hpp"
 using namespace std;
 
 
@@ -31,7 +32,7 @@ int main (int argc, char* argv[]) {
 
 start:
   int board[3][3];
-  bool game = 1;
+  bool game = 0;
 
 /*
   board[0][0] = 1;
@@ -46,7 +47,7 @@ start:
 //result is 2 as expected
 
 
-  while (game == 1) {
+  while (game == 0) {
 
   loop1:
     string choice1;
@@ -86,10 +87,59 @@ start:
       default:
         cout << "Please provide valid input";
         goto loop1;
-
     }
 
+    game = checkGameOverP1(board[0][0], board[0][1], board[0][2], board[1][0], board[1][1], board[1][2], board[2][0], board[2][1], board[2][2]);
 
+
+loop2:
+    string choice3;
+    string choice4;
+
+    cout << "Player 2, input your choice:";
+    cin >> choice3 >> choice4;
+
+    switch (choice3 + "," + choice4) {
+      case "1,1":
+        board[0][0] = -1;
+        break;
+      case "1,2":
+        board[0][1] = -1;
+        break;
+      case "1,3":
+        board[0][2] = -1;
+        break;
+      case "2,1":
+        board[1][0] = -1;
+        break;
+      case "2,2":
+        board[1][1] = -1;
+        break;
+      case "2,3":
+        board[1][2] = -1;
+        break;
+      case "3,1":
+        board[2][0] = -1;
+        break;
+      case "3,2":
+        board[2][1] = -1;
+        break;
+      case "3,3":
+        board[2][2] = -1;
+        break;
+      default:
+        cout << "Please provide valid input";
+        goto loop2;
+    }
+
+    game = checkGameOverP2(board[0][0], board[0][1], board[0][2], board[1][0], board[1][1], board[1][2], board[2][0], board[2][1], board[2][2]);
+
+  }
+
+  if (game == 1) {
+    cout << "Okay, that's enough, player 1 wins!" << endl;
+  } else if (game == -1) {
+    cout << "Okay, that's enough, player 2 wins!" << endl;
   }
 
 
