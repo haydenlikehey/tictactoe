@@ -1,4 +1,4 @@
-#include <iostream>
+''#include <iostream>
 #include <vector>
 #include "ttt.hpp"
 using namespace std;
@@ -11,7 +11,11 @@ int main (int argc, char* argv[]) {
   cout << "Here are the rules:\n" << endl;
   cout << "\t-Decide amongst yourselves who will be player one\n and who will be player two" << endl;
   cout << "\t-Player 1 will go first and input either a 2 dimensional coordinate into the console" << endl;
+<<<<<<< HEAD
   cout << "\t-This will be done in the format \"x,x\"" << endl;
+=======
+  cout << "\t-This will be done in the format \"x,x\""; << endl;
+>>>>>>> 03ce69cadb73db74893c736a0b1666139165a67a
   cout << "\t-This is done to select the coordinates of the space to place and \"X\"" << endl;
   cout << "\t-Player 2 will follow for \"O\" and the cycle will continue until someone wins" << endl;
   cout << "\t-The first to get three in a row wins\n\n\n\n";
