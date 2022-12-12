@@ -1,4 +1,4 @@
-''#include <iostream>
+#include <iostream>
 #include <vector>
 #include "ttt.hpp"
 using namespace std;
@@ -11,29 +11,21 @@ int main (int argc, char* argv[]) {
   cout << "Here are the rules:\n" << endl;
   cout << "\t-Decide amongst yourselves who will be player one\n and who will be player two" << endl;
   cout << "\t-Player 1 will go first and input either a 2 dimensional coordinate into the console" << endl;
-<<<<<<< HEAD
   cout << "\t-This will be done in the format \"x,x\"" << endl;
-=======
-  cout << "\t-This will be done in the format \"x,x\""; << endl;
->>>>>>> 03ce69cadb73db74893c736a0b1666139165a67a
   cout << "\t-This is done to select the coordinates of the space to place and \"X\"" << endl;
   cout << "\t-Player 2 will follow for \"O\" and the cycle will continue until someone wins" << endl;
   cout << "\t-The first to get three in a row wins\n\n\n\n";
 
- /*Okay, here's the plan
- -Establish an array or vector for the field
- -Have them tied to a coordinate plane
- -Make sure input is off by one bc that's how vectors work
- -Maybe include some ascii art but probably not becuase that's not my forté
- -Create a loop that esablishes gameplay
-    I'm thinking player1 turn (cin coordinates as ints handled with switch), win check function,
-    followed by same for player two, resetting variables with initiation
-
-    About that win check function, I think I can do some fancy maths to see if a
-    player has one rather than creating the 8 win conditions
-    This just made me think of considering to use bitfields. If I can, I will
-
-    Not much planned after that. Getting the whole github bullshit figured out tuckered me out*/
+ /*As far as this version is concerned, there needs to be some serious refactoring.
+ Here are some considerations:
+  1. We write the board out in the rules using the ascii art we found online
+  2. We just make the grid a single dimensional array (0-8) that corresponds to the
+     above ascii idea
+  I think that makes the most sense in that area, that way we can accpet user input
+  in a controlled and easy fashion. They just have to type in a number then we can
+  switch it. Simple as and saves the headache of refactoring all of this with if-else
+  statements, which is the other alternative and would be simple but perhaps tedious.
+  I'll sleep on it tbh*/
 
 start:
   int board[3][3];
