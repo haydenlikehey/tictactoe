@@ -1,4 +1,4 @@
-#include <iostream>
+''#include <iostream>
 #include <vector>
 #include "ttt.hpp"
 using namespace std;
@@ -11,8 +11,9 @@ int main (int argc, char* argv[]) {
   cout << "Here are the rules:\n" << endl;
   cout << "\t-Decide amongst yourselves who will be player one\n and who will be player two" << endl;
   cout << "\t-Player 1 will go first and input either a 2 dimensional coordinate into the console" << endl;
-  cout << "\t-This is done to select the coordinates of the space to place and \"X\"";
-  cout << "\t-Player 2 will follow for \"O\" and the cycle will continue until someone wins";
+  cout << "\t-This will be done in the format \"x,x\""; << endl;
+  cout << "\t-This is done to select the coordinates of the space to place and \"X\"" << endl;
+  cout << "\t-Player 2 will follow for \"O\" and the cycle will continue until someone wins" << endl;
   cout << "\t-The first to get three in a row wins\n\n\n\n";
 
  /*Okay, here's the plan
@@ -51,37 +52,36 @@ start:
 
   loop1:
     string choice1;
-    string choice2;
 
     cout << "Player 1, input your choice:";
-    cin >> choice1 >> choice2;
+    cin >> choice1;
 
-    switch (choice1 + "," + choice2) {
-      case "1,1":
+    switch (choice1) {
+      case '1,1':
         board[0][0] = 1;
         break;
-      case "1,2":
+      case '1,2':
         board[0][1] = 1;
         break;
-      case "1,3":
+      case '1,3':
         board[0][2] = 1;
         break;
-      case "2,1":
+      case '2,1':
         board[1][0] = 1;
         break;
-      case "2,2":
+      case '2,2':
         board[1][1] = 1;
         break;
-      case "2,3":
+      case '2,3':
         board[1][2] = 1;
         break;
-      case "3,1":
+      case '3,1':
         board[2][0] = 1;
         break;
-      case "3,2":
+      case '3,2':
         board[2][1] = 1;
         break;
-      case "3,3":
+      case '3,3':
         board[2][2] = 1;
         break;
       default:
@@ -93,38 +93,37 @@ start:
 
 
 loop2:
-    string choice3;
-    string choice4;
+    string choice2;
 
     cout << "Player 2, input your choice:";
-    cin >> choice3 >> choice4;
+    cin >> choice2;
 
-    switch (choice3 + "," + choice4) {
-      case "1,1":
+    switch (choice2) {
+      case '1,1':
         board[0][0] = -1;
         break;
-      case "1,2":
+      case '1,2':
         board[0][1] = -1;
         break;
-      case "1,3":
+      case '1,3':
         board[0][2] = -1;
         break;
-      case "2,1":
+      case '2,1':
         board[1][0] = -1;
         break;
-      case "2,2":
+      case '2,2':
         board[1][1] = -1;
         break;
-      case "2,3":
+      case '2,3':
         board[1][2] = -1;
         break;
-      case "3,1":
+      case '3,1':
         board[2][0] = -1;
         break;
-      case "3,2":
+      case '3,2':
         board[2][1] = -1;
         break;
-      case "3,3":
+      case '3,3':
         board[2][2] = -1;
         break;
       default:
