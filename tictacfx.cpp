@@ -16,6 +16,8 @@ int checkGameOverP1(int result1, int result2, int result3, int result4, int resu
 
   if (check1 == 3 || check2 == 3 || check3 == 3 || check4 == 3 || check5 == 3 || check6 == 3 || check7 == 3 || check8 ==3) {
     return 1;
+  } else {
+    return 0;
   }
 }
 
@@ -33,5 +35,7 @@ int checkGameOverP2(int result1, int result2, int result3, int result4, int resu
 
   if (check1 == -3 || check2 == -3 || check3 == -3 || check4 == -3 || check5 == -3 || check6 == -3 || check7 == -3 || check8 ==-3) {
     return -1;
+  } else {
+    return 0;
   }
 }
