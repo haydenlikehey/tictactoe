@@ -28,8 +28,8 @@ int main (int argc, char* argv[]) {
   I'll sleep on it tbh*/
 
 start:
-  int board[3][3];
-  bool game = 0;
+  int board[9];
+  int game = 0;
 
 /*
   board[0][0] = 1;
@@ -47,87 +47,87 @@ start:
   while (game == 0) {
 
   loop1:
-    string choice1;
+    char choice1;
 
     cout << "Player 1, input your choice:";
     cin >> choice1;
 
     switch (choice1) {
-      case '1,1':
-        board[0][0] = 1;
+      case '1':
+        board[0] = 1;
         break;
-      case '1,2':
-        board[0][1] = 1;
+      case '2':
+        board[1] = 1;
         break;
-      case '1,3':
-        board[0][2] = 1;
+      case '3':
+        board[2] = 1;
         break;
-      case '2,1':
-        board[1][0] = 1;
+      case '4':
+        board[3] = 1;
         break;
-      case '2,2':
-        board[1][1] = 1;
+      case '5':
+        board[4] = 1;
         break;
-      case '2,3':
-        board[1][2] = 1;
+      case '6':
+        board[5] = 1;
         break;
-      case '3,1':
-        board[2][0] = 1;
+      case '7':
+        board[6] = 1;
         break;
-      case '3,2':
-        board[2][1] = 1;
+      case '8':
+        board[7] = 1;
         break;
-      case '3,3':
-        board[2][2] = 1;
+      case '9':
+        board[8] = 1;
         break;
       default:
         cout << "Please provide valid input";
         goto loop1;
     }
 
-    game = checkGameOverP1(board[0][0], board[0][1], board[0][2], board[1][0], board[1][1], board[1][2], board[2][0], board[2][1], board[2][2]);
+    game = checkGameOverP1(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
 
 
-loop2:
-    string choice2;
+  loop2:
+    char choice2;
 
     cout << "Player 2, input your choice:";
     cin >> choice2;
 
     switch (choice2) {
-      case '1,1':
-        board[0][0] = -1;
+      case '1':
+        board[0] = -1;
         break;
-      case '1,2':
-        board[0][1] = -1;
+      case '2':
+        board[1] = -1;
         break;
-      case '1,3':
-        board[0][2] = -1;
+      case '3':
+        board[2] = -1;
         break;
-      case '2,1':
-        board[1][0] = -1;
+      case '4':
+        board[3] = -1;
         break;
-      case '2,2':
-        board[1][1] = -1;
+      case '5':
+        board[4] = -1;
         break;
-      case '2,3':
-        board[1][2] = -1;
+      case '6':
+        board[5] = -1;
         break;
-      case '3,1':
-        board[2][0] = -1;
+      case '7':
+        board[6] = -1;
         break;
-      case '3,2':
-        board[2][1] = -1;
+      case '8':
+        board[7] = -1;
         break;
-      case '3,3':
-        board[2][2] = -1;
+      case '9':
+        board[8] = -1;
         break;
       default:
         cout << "Please provide valid input";
         goto loop2;
     }
 
-    game = checkGameOverP2(board[0][0], board[0][1], board[0][2], board[1][0], board[1][1], board[1][2], board[2][0], board[2][1], board[2][2]);
+    game = checkGameOverP2(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
 
   }
 
