@@ -24,32 +24,21 @@ int main (int argc, char* argv[]) {
   cout << "\t-Player 2 will follow for \"O\" and the cycle will continue until someone wins" << endl;
   cout << "\t-The first to get three in a row wins\n\n\n\n";
 
- /*As far as this version is concerned, there needs to be some serious refactoring.
- Here are some considerations:
-  1. We write the board out in the rules using the ascii art we found online
-  2. We just make the grid a single dimensional array (0-8) that corresponds to the
-     above ascii idea
-  I think that makes the most sense in that area, that way we can accpet user input
-  in a controlled and easy fashion. They just have to type in a number then we can
-  switch it. Simple as and saves the headache of refactoring all of this with if-else
-  statements, which is the other alternative and would be simple but perhaps tedious.
-  I'll sleep on it tbh*/
+
+/*Some considerations for the future version that displays the X's and O's in the console:
+  Store the grid as a series of char arrays
+  Pop an array's coordinate at the numbered space with an X or O
+  Alternatively, we could learn file input, write the grid to that, then ensure that only the first
+  character is popped into place and we can discard all other input very easily and keep the junk
+  extra characters out. Keep the stream clear and all.
+Other future iteration considerations:
+  Provide a check that makes sure no input has already been placed into a square. Thinking short if-else
+  trees but this may be bad taste*/
+
 
 start:
-  int board[9];
-  int game = 0;
-
-/*
-  board[0][0] = 1;
-  board[0][1] = 1;
-  board[0][2] = 0;
-*/
-
-//Seeing what the result of bool math is
-//  int result = board[0][0] + board[0][1] + board[0][2];
-
-// cout << result;
-//result is 2 as expected
+  short board[9];
+  short game = 0;
 
 
   while (game == 0) {
