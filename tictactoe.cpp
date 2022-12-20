@@ -10,9 +10,17 @@ int main (int argc, char* argv[]) {
   cout << "Tic-Tac-Toe" << endl;
   cout << "Here are the rules:\n" << endl;
   cout << "\t-Decide amongst yourselves who will be player one\n and who will be player two" << endl;
-  cout << "\t-Player 1 will go first and input either a 2 dimensional coordinate into the console" << endl;
-  cout << "\t-This will be done in the format \"x,x\"" << endl;
-  cout << "\t-This is done to select the coordinates of the space to place and \"X\"" << endl;
+  cout << "\t-Player 1 will go first and input their desired move based on the numbering system below:\n" << endl;
+  cout << "     |     |     " << endl;
+  cout << "  1  |  2  |  3  " << endl;
+  cout << "_____|_____|_____" << endl;
+  cout << "     |     |     " << endl;
+  cout << "  4  |  5  |  6  " << endl;
+  cout << "_____|_____|_____" << endl;
+  cout << "     |     |     " << endl;
+  cout << "  7  |  8  |  9  " << endl;
+  cout << "     |     |     \n" << endl;
+  cout << "\t-This is done to select the space to place an \"X\"" << endl;
   cout << "\t-Player 2 will follow for \"O\" and the cycle will continue until someone wins" << endl;
   cout << "\t-The first to get three in a row wins\n\n\n\n";
 
