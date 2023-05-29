@@ -26,7 +26,7 @@ short checkGameOverP2(short result1, short result2, short result3, short result4
 void printRules(void) {
   cout << "Tic-Tac-Toe" << endl;
   cout << "Here are the rules:\n" << endl;
-  cout << "\t-Decide amongst yourselves who will be player one\n and who will be player two" << endl;
+  cout << "\t-Decide amongst yourselves who will be player one\n\tand who will be player two" << endl;
   cout << "\t-Player 1 will go first and input their desired move based on the numbering system below:\n" << endl;
   cout << "     |     |     " << endl;
   cout << "  1  |  2  |  3  " << endl;
