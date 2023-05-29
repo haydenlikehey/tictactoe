@@ -4,4 +4,4 @@ Hey again
 
 This is just a codecademy project I'm finally expanding.
 
-Be sure to check the messages and history for updates. Newest update is that players can no longer overwrite each others's rules and game functionality has been expanded to include ties!
+Should be fully functioning, works with ties, breaks early if one player wins, has a procedure that prints the up-to-date board. The whole shebang. Enjoy!
