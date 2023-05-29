@@ -14,7 +14,7 @@ printRules();
   short turns = 0;
 
 
-  while (turns < 10) {
+  while (turns < 9) {
 
   loop1:
     char choice1;
@@ -67,6 +67,8 @@ printRules();
     printCurrentBoard(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
     game = checkGameOverP1(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
     turns++;
+    if (turns == 9) {continue;} //Last move victory failsafe
+    if (game != 0) {break;} //Win condition breakout
       
   loop2:
     char choice2;
@@ -118,6 +120,7 @@ printRules();
     printCurrentBoard(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
     game = checkGameOverP2(board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
     turns++;
+    if (game != 0) {break;}
   }
 
   if (game == 1) {
