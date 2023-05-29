@@ -3,7 +3,7 @@
 using namespace std;
 
 
-int checkGameOverP1(short result1, short result2, short result3, short result4, short result5, short result6, short result7, short result8, short result9) {
+short checkGameOverP1(short result1, short result2, short result3, short result4, short result5, short result6, short result7, short result8, short result9) {
 
   if (result1 + result2 + result3 == 3 || result1 + result4 + result7 == 3 || result1 + result5 + result9 == 3 || result4 + result5 + result6 == 3 || result7 + result8 + result9 == 3 || result2 + result5 + result8 == 3 || result2 + result6 + result9 == 3 || result3 + result5 + result7 == 3) {
     return 1;
@@ -14,7 +14,7 @@ int checkGameOverP1(short result1, short result2, short result3, short result4, 
 
 
 
-int checkGameOverP2(short result1, short result2, short result3, short result4, short result5, short result6, short result7, short result8, short result9) {
+short checkGameOverP2(short result1, short result2, short result3, short result4, short result5, short result6, short result7, short result8, short result9) {
 
   if (result1 + result2 + result3 == -3 || result1 + result4 + result7 == -3 || result1 + result5 + result9 == -3 || result4 + result5 + result6 == -3 || result7 + result8 + result9 == -3 || result2 + result5 + result8 == -3 || result2 + result6 + result9 == -3 || result3 + result5 + result7 == -3) {
     return -1;
