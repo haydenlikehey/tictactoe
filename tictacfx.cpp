@@ -43,15 +43,7 @@ void printRules(void) {
 
 void printCurrentBoard(short result1, short result2, short result3, short result4, short result5, short result6, short result7, short result8, short result9) {
 
-  char space1; 
-  char space2;
-  char space3;
-  char space4;
-  char space5;
-  char space6;
-  char space7;
-  char space8;
-  char space9; 
+  char space1, space2, space3, space4, space5, space6, space7, space8, space9; 
 
   if (result1 == 0) {space1 = '_';} else if (result1 == 1) {space1 = 'X';} else {space1 = 'O';}
   if (result2 == 0) {space2 = '_';} else if (result2 == 1) {space2 = 'X';} else {space2 = 'O';}
