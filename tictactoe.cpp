@@ -8,7 +8,7 @@ int main (int argc, char* argv[]) {
 
 printRules();
 
-  short board[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
+  short board[] {};
   short game = 0;
   short turns = 0;
 
