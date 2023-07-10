@@ -109,7 +109,7 @@ printRules();
         if (board[7] == 0) {board[7] = -1;}
         break;
       case '9':
-                    if (board[8] != 0) {cout << "This space is taken." << endl; goto loop2;}
+        if (board[8] != 0) {cout << "This space is taken." << endl; goto loop2;}
         if (board[8] == 0) {board[8] = -1;}
         break;
       default:
