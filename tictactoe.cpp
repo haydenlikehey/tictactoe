@@ -57,9 +57,11 @@ int main (int argc, char* argv[]) {
         break;
       case 'r':
         printRules();
+        goto loop1;
         break;
       case 'R':
         printRules();
+        goto loop1;
         break;
       case 'q':
         return 0;
@@ -123,9 +125,11 @@ int main (int argc, char* argv[]) {
         break;
       case 'r':
         printRules();
+        goto loop1;
         break;
       case 'R':
         printRules();
+        goto loop1;
         break;
       case 'q':
         return 0;
