@@ -66,7 +66,7 @@ printRules();
     }
 
     printCurrentBoard(vboard);
-    game = checkGameOverP1(vboard[0], vboard[1], vboard[2], vboard[3], vboard[4], vboard[5], vboard[6], vboard[7], vboard[8]);
+    game = checkGameOverP1(vboard);
     turns++;
     if (turns == 9) {continue;} //Last move victory failsafe
     if (game != 0) {break;} //Win condition breakout

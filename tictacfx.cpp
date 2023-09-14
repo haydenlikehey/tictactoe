@@ -5,6 +5,8 @@ using std::cout, std::vector;
 
 short checkGameOverP1(vector<int> result) {
 
+  //I think this is probably a stupid way to do this
+  //Don't know any improvements rn tho...
   if (result[0] + result[1] + result[2] == 3 || result[0] + result[3] + result[6] == 3 || result[0] + result[4] + result[8] == 3 || result[3] + result[4] + result[5] == 3 || result[6] + result[7] + result[8] == 3 || result[1] + result[4] + result[7] == 3 || result[1] + result[5] + result[8] == 3 || result[2] + result[4] + result[6] == 3) {
     return 1;
   } else {
@@ -46,6 +48,7 @@ void printCurrentBoard(vector<int> result) {
 
   char space1, space2, space3, space4, space5, space6, space7, space8, space9; 
 
+  //Did all this bullshit to try to formulate a switch for this just to fuck it up!
   if (result[0] == 0) {space1 = '_';} else if (result[0] == 1) {space1 = 'X';} else {space1 = 'O';}
   if (result[1] == 0) {space2 = '_';} else if (result[1] == 1) {space2 = 'X';} else {space2 = 'O';}
   if (result[2] == 0) {space3 = '_';} else if (result[2] == 1) {space3 = 'X';} else {space3 = 'O';}
