@@ -3,10 +3,9 @@
 
 int main (int argc, char* argv[]) {
 
-printRules();
+  printRules();
 
   vector<int> vboard(9, 0);
-  //short vboard[9] {};
   short game = 0;
   short turns = 0;
 
@@ -56,6 +55,12 @@ printRules();
         if (vboard[8] != 0) {cout << "This space is taken." << "\n"; goto loop1;}
         if (vboard[8] == 0) {vboard[8] = 1;}
         break;
+      case 'r':
+        printRules();
+        break;
+      case 'R':
+        printRules();
+        break;
       default:
         cout << "Please provide valid input";
         goto loop1;
@@ -73,7 +78,7 @@ printRules();
     cout << "Player 2, input your choice:";
     cin >> choice2;
 
-     switch (choice2) {
+    switch (choice2) {
       case '1':
         if (vboard[0] != 0) {cout << "This space is taken." << "\n"; goto loop2;}
         if (vboard[0] == 0) {vboard[0] = -1;}
@@ -109,6 +114,12 @@ printRules();
       case '9':
         if (vboard[8] != 0) {cout << "This space is taken." << "\n"; goto loop2;}
         if (vboard[8] == 0) {vboard[8] = -1;}
+        break;
+      case 'r':
+        printRules();
+        break;
+      case 'R':
+        printRules();
         break;
       default:
         cout << "Please provide valid input";
