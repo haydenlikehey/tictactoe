@@ -1,8 +1,4 @@
-#include <iostream>
-#include <vector>
 #include "ttt.hpp"
-using std::cout, std::cin, std::vector;
-
 
 
 int main (int argc, char* argv[]) {
