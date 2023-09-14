@@ -16,7 +16,7 @@ int main (int argc, char* argv[]) {
     char choice1;
 
     cout << "Player 1, input your choice:";
-    cin >> choice1;
+    cin >> setw(1) >>choice1;
 
     switch (choice1) {
       case '1':
@@ -61,6 +61,12 @@ int main (int argc, char* argv[]) {
       case 'R':
         printRules();
         break;
+      case 'q':
+        return 0;
+        break;
+      case 'Q':
+        return 0;
+        break;
       default:
         cout << "Please provide valid input";
         goto loop1;
@@ -76,7 +82,7 @@ int main (int argc, char* argv[]) {
     char choice2;
 
     cout << "Player 2, input your choice:";
-    cin >> choice2;
+    cin >> setw(1) >> choice2;
 
     switch (choice2) {
       case '1':
@@ -120,6 +126,12 @@ int main (int argc, char* argv[]) {
         break;
       case 'R':
         printRules();
+        break;
+      case 'q':
+        return 0;
+        break;
+      case 'Q':
+        return 0;
         break;
       default:
         cout << "Please provide valid input";

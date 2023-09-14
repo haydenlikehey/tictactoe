@@ -42,6 +42,7 @@ void printRules(void) {
   cout << "\t-This is done to select the space to place an \"X\"" << "\n";
   cout << "\t-Player 2 will follow for \"O\" and the cycle will continue until someone wins" << "\n";
   cout << "Input \"R\" at any time to view the rules and board again" << "\n";
+  cout << "Input \"Q\" at any time to quit the game" << "\n";
   cout << "\t-The first to get three in a row wins\n\n\n\n";
 }
 
