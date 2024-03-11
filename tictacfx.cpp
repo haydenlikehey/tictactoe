@@ -7,7 +7,14 @@ short checkGameOverP1(vector<int> result) {
 
   //I think this is probably a stupid way to do this
   //Don't know any improvements rn tho...
-  if (result[0] + result[1] + result[2] == 3 || result[0] + result[3] + result[6] == 3 || result[0] + result[4] + result[8] == 3 || result[3] + result[4] + result[5] == 3 || result[6] + result[7] + result[8] == 3 || result[1] + result[4] + result[7] == 3 || result[1] + result[5] + result[8] == 3 || result[2] + result[4] + result[6] == 3) {
+  if (result[0] + result[1] + result[2] == 3 ||
+      result[0] + result[3] + result[6] == 3 ||
+      result[0] + result[4] + result[8] == 3 ||
+      result[3] + result[4] + result[5] == 3 ||
+      result[6] + result[7] + result[8] == 3 ||
+      result[1] + result[4] + result[7] == 3 ||
+      result[1] + result[5] + result[8] == 3 ||
+      result[2] + result[4] + result[6] == 3) {
     return 1;
   } else {
     return 0;
@@ -18,7 +25,14 @@ short checkGameOverP1(vector<int> result) {
 
 short checkGameOverP2(vector<int> result) {
 
-  if (result[0] + result[1] + result[2] == -3 || result[0] + result[3] + result[6] == -3 || result[0] + result[4] + result[8] == -3 || result[3] + result[4] + result[5] == -3 || result[6] + result[7] + result[8] == -3 || result[1] + result[4] + result[7] == -3 || result[1] + result[5] + result[8] == -3 || result[2] + result[4] + result[6] == -3) {
+  if (result[0] + result[1] + result[2] == -3 ||
+      result[0] + result[3] + result[6] == -3 ||
+      result[0] + result[4] + result[8] == -3 ||
+      result[3] + result[4] + result[5] == -3 ||
+      result[6] + result[7] + result[8] == -3 ||
+      result[1] + result[4] + result[7] == -3 ||
+      result[1] + result[5] + result[8] == -3 || 
+      result[2] + result[4] + result[6] == -3) {
     return -1;
   } else {
     return 0;
@@ -48,29 +62,29 @@ void printRules(void) {
 
 void printCurrentBoard(vector<int> result) {
 
-  char space1, space2, space3, space4, space5, space6, space7, space8, space9; 
+  char space[9] {}; 
 
-  //Did all this bullshit to try to formulate a switch for this just to fuck it up!
-  if (result[0] == 0) {space1 = '_';} else if (result[0] == 1) {space1 = 'X';} else {space1 = 'O';}
-  if (result[1] == 0) {space2 = '_';} else if (result[1] == 1) {space2 = 'X';} else {space2 = 'O';}
-  if (result[2] == 0) {space3 = '_';} else if (result[2] == 1) {space3 = 'X';} else {space3 = 'O';}
-  if (result[3] == 0) {space4 = '_';} else if (result[3] == 1) {space4 = 'X';} else {space4 = 'O';}
-  if (result[4] == 0) {space5 = '_';} else if (result[4] == 1) {space5 = 'X';} else {space5 = 'O';}
-  if (result[5] == 0) {space6 = '_';} else if (result[5] == 1) {space6 = 'X';} else {space6 = 'O';}
-  if (result[6] == 0) {space7 = '_';} else if (result[6] == 1) {space7 = 'X';} else {space7 = 'O';}
-  if (result[7] == 0) {space8 = '_';} else if (result[7] == 1) {space8 = 'X';} else {space8 = 'O';}
-  if (result[8] == 0) {space9 = '_';} else if (result[8] == 1) {space9 = 'X';} else {space9 = 'O';}
+  for(int i = 0; i < 9; i++) {
 
-  
+    switch(result[i]) {
+      case 1:
+        space[i] = 'X';
+      case -1:
+        space[i] = 'O';
+      default:
+        space[i] = '_';
+    }
+
+  } 
 
   cout << "     |     |     " << "\n";
-  cout << "  " << space1 << "  |  " << space2 << "  |  " << space3 << "  " << "\n";
+  cout << "  " << space[0] << "  |  " << space[1] << "  |  " << space[2] << "  " << "\n";
   cout << "_____|_____|_____" << "\n";
   cout << "     |     |     " << "\n";
-  cout << "  " << space4 << "  |  " << space5 << "  |  " << space6 << "  " << "\n";
+  cout << "  " << space[3] << "  |  " << space[4] << "  |  " << space[5] << "  " << "\n";
   cout << "_____|_____|_____" << "\n";
   cout << "     |     |     " << "\n";
-  cout << "  " << space7 << "  |  " << space8 << "  |  " << space9 << "  " << "\n";
+  cout << "  " << space[6] << "  |  " << space[7] << "  |  " << space[8] << "  " << "\n";
   cout << "     |     |     \n" << "\n";
 
 
