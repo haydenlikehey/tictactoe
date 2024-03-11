@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 #include <iomanip>
 using std::cout, std::cin, std::setw;
 
