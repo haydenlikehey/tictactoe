@@ -5,7 +5,7 @@ int main (int argc, char* argv[]) {
 
   printRules();
 
-  vector<int> vboard(9, 0);
+  int vboard[9] {};
   short game = 0;
   short turns = 0;
 
@@ -16,7 +16,7 @@ int main (int argc, char* argv[]) {
     char choice1;
 
     cout << "Player 1, input your choice:";
-    cin >> setw(1) >>choice1;
+    cin >> setw(1) >> choice1;
 
     switch (choice1) {
       case '1':

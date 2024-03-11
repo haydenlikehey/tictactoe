@@ -3,7 +3,7 @@
 using std::cout, std::vector;
 
 
-short checkGameOverP1(vector<int> result) {
+short checkGameOverP1(int* result) {
 
   //I think this is probably a stupid way to do this
   //Don't know any improvements rn tho...
@@ -23,7 +23,7 @@ short checkGameOverP1(vector<int> result) {
 
 
 
-short checkGameOverP2(vector<int> result) {
+short checkGameOverP2(int* result) {
 
   if (result[0] + result[1] + result[2] == -3 ||
       result[0] + result[3] + result[6] == -3 ||
@@ -60,19 +60,24 @@ void printRules(void) {
   cout << "Input \"Q\" at any time to quit the game" << "\n\n\n\n";
 }
 
-void printCurrentBoard(vector<int> result) {
+void printCurrentBoard(int* result) {
 
   char space[9] {}; 
 
   for(int i = 0; i < 9; i++) {
-
     switch(result[i]) {
       case 1:
         space[i] = 'X';
+        break;
       case -1:
         space[i] = 'O';
+        break;
       default:
         space[i] = '_';
+      #ifdef DEBUG
+      cout << result[i] << "\n\n" << space[i] << "\n" << std::endl;
+      #endif
+
     }
 
   } 
@@ -85,7 +90,7 @@ void printCurrentBoard(vector<int> result) {
   cout << "_____|_____|_____" << "\n";
   cout << "     |     |     " << "\n";
   cout << "  " << space[6] << "  |  " << space[7] << "  |  " << space[8] << "  " << "\n";
-  cout << "     |     |     \n" << "\n";
+  cout << "     |     |     \n" << std::endl;
 
 
 }
